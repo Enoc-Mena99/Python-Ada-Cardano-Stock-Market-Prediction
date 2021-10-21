@@ -89,3 +89,4 @@ validData['Predictions'] = closing_prediction_price
 
 plt.plot(trainData["Close"])
 plt.plot(validData[['Close', "Predictions"]])
+plt.show()
