@@ -23,7 +23,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 data = pd.read_csv("ADA-USD-2.csv")  # import data from .csv file
 data.head()
-data["Date"] = pd.to_datetime(data.Date, format="%Y-%m-%d")  # format the date to follow [year, month, day]
+data['Date'] = pd.to_numeric(pd.to_datetime(data['Date']))
 data.index = data['Date']
 
 plt.figure(figsize=(16, 8))  # 16 x 8 inch data frame
